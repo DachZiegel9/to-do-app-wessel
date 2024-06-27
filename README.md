@@ -7,8 +7,10 @@ Hier ein kleines Projekt einer ToDo App mit node.js, express.js, SQLite, Angular
 1. Herunterladen des Projektes und entzippen (alle extrahieren)
 2. Terminal starten
 3. Zum Projekt navigeren und dann ins Backend navigieren'cd backend'
+   
     a. folgenden Befehl ins Terminal eintragen: 'npm install'
-4. Aus dem Backend zurück navigieren'cd ..' und anschließend ins frontend navigieren 'cd frontend'
+5. Aus dem Backend zurück navigieren'cd ..' und anschließend ins frontend navigieren 'cd frontend'
+   
     a. folgenden Befehl ins Terminal eintragen: 'npm install'
-5. Aus dem frontend zurück navigieren'cd ..' und anschließend nochmal 'npm install'
-6. Starten der Anwendendung mit folgendem Befehl: 'node start.js'
+7. Aus dem frontend zurück navigieren'cd ..' und anschließend nochmal 'npm install'
+8. Starten der Anwendendung mit folgendem Befehl: 'node start.js'
