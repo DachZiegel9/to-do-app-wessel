@@ -1,0 +1,72 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="content">
+    <div class="row m-0">
+      <div class="col-12 bg-primary bg-gradient pb-2 pt-2 pe-0 ps-0">
+        <h1 class="text-center text-white">To-Do Liste</h1>
+      </div>
+    </div>
+    <div class="row ms-0 me-0">
+      <div *ngFor="let todo of todos" class="row d-block m-0 p-0">
+        <div *ngFor="let t of todo.data; index as i" [ngClass]="{'test': t.changingtodo == true}" class="row d-block border-bottom m-0">
+          <div class="col-12 col-sm-12 col-md-9 col-lg-8 col-xl-6 d-block m-auto">
+            <div class="row d-flex align-items-center">
+              <div class="col-2 col-sm-1">
+                <div *ngIf="t.status == 'ausstehend'">
+                  <button (mouseover)="toggleCheck(true, i)" (mouseout)="toggleCheck(false ,i)" (click)="changeStatus(t)" type="button" class="btn btn-link bg-gradient color-primary position-relative btn-c">
+                    <i class="fa fa-circle-thin" aria-hidden="true"></i>
+                    <i *ngIf="t.showCheck" class="fa fa-check-circle show-check" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div *ngIf="t.status == 'abgeschlossen'">
+                  <button (click)="changeStatus(t)" type="button" class="btn btn-link bg-gradient color-primary btn-c">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="col-10 col-sm-9">
+                <div>
+                  <h4 class="mb-0">{{ t.titel }}</h4>
+                </div>
+              </div>
+              <div class="col-12 col-sm-2 d-flex btn-desktop">
+                <button (click)="changeToDo(t)" type="button" class="btn btn-primary me-3 btn-desktop">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </button>
+                <button (click)="deleteToDo(t.id)" type="button" class="btn btn-primary btn-desktop">
+                  <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="col-sm-0 col-md-1">
+              </div>
+              <div class="col-sm-12 col-md-9 margin-negativ">
+                <p>{{ t.beschreibung }}</p>
+              </div>
+              <div class="col-12 col-sm-2 btn-mobil">
+                <button (click)="changeToDo(t)" type="button" class="btn btn-primary me-3 btn-change">
+                  <i class="fa fa-pencil" aria-hidden="true"></i><p class="show-txt">Ändern</p>
+                </button>
+                <button (click)="deleteToDo(t.id)" type="button" class="btn btn-primary btn-change">
+                  <i class="fa fa-close" aria-hidden="true"></i><p class="show-txt">Löschen</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="todos.length == 0 || todos[0].data.length == 0" class="row border-bottom">
+        <div class="col-12 d-flex">
+          <p class="m-auto mt-3 mb-3">Keine ToDos vorhanden</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-9 col-sm-4 col-md-3 col-xl-2 d-flex m-auto mt-3" (click)="isPopupVisible = !isPopupVisible">
+          <button type="button" class="btn btn-primary bg-gradient pt-2 pb-2 color-primary btn-neu"><i class="fa fa-plus pe-2"></i> Neue To-Do</button>
+        </div>
+      </div> 
+    </div>
+</div>
+
+    
+<app-to-do-popup *ngIf="isPopupVisible" [todo]="currentTodo" (save)="saveTodo($event)" (cancel)="closePopup()"></app-to-do-popup>

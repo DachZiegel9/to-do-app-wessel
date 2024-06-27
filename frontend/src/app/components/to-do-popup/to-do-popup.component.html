@@ -1,0 +1,30 @@
+<div class="modal fade show" tabindex="-1" style="display: block;" role="dialog">
+    <div class="modal-dialog" role="document" class="popup-width">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between">
+                <h5 class="modal-title">{{ todo ? 'Todo bearbeiten' : 'Neues Todo' }}</h5>
+                <button type="button" class="btn btn-primary bg-gradient float-end" (click)="closeToDo()">
+                    <i class="fa fa-close" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 d-block m-auto mt-2">
+                        <form [formGroup]="formtodo" class="d-block w-100">
+                            <input type="text" formControlName="titel" class="w-100 bg-form" placeholder="Titel">
+                            <textarea formControlName="beschreibung" class="w-100 mt-2 mb-2" placeholder="Beschreibung"></textarea>
+                        </form>
+                        <div class="row">
+                            <div class="col text-start">
+                                <button type="button" class="btn btn-primary bg-gradient pt-2 pb-2" (click)="saveToDo()">Speichern</button>
+                            </div>
+                            <div class="col text-end">
+                                <button type="button" class="btn btn-outline-primary bg-gradient pt-2 pb-2 float-right" (click)="closeToDo()">Abbrechen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,63 @@
+.btn-neu{
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.btn-c{
+    border-radius: 100%;
+    font-size: 35px;
+}
+
+.show-check{
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    opacity: .5;
+}
+
+.margin-negativ{
+    margin-top: -.75em;
+}
+
+.test{
+    background-color: #0d6efd22;
+}
+
+.show-txt{
+    display: none;
+}
+
+.btn-desktop{
+    display: block;
+}
+
+.btn-mobil{
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .btn-desktop{
+        display: none;
+    }
+
+    .btn-mobil{
+        display: block;
+    }
+
+    .show-txt{
+        display: inline;
+        margin-left: .5em;
+    }
+
+    .btn-change{
+        width: 40%;
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    .margin-negativ{
+        margin-top: 0;
+    }
+    
+}

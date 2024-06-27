@@ -1,0 +1,13 @@
+.popup-width{
+    width: 60%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 576px) {
+    .popup-width{
+        width: 100%;
+        margin: auto;
+        margin-top: 1em;
+    }
+}
