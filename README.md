@@ -1,27 +1,14 @@
 # ToDoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.5.
+Hier ein kleines Projekt einer ToDo App mit node.js, express.js, SQLite, Angular, Bootstrap
 
-## Development server
+## Wie starten
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Herunterladen des Projektes und entzippen (alle extrahieren)
+2. Terminal starten
+3. Zum Projekt navigeren und dann ins Backend navigieren'cd backend'
+    a. folgenden Befehl ins Terminal eintragen: 'npm install'
+4. Aus dem Backend zurück navigieren'cd ..' und anschließend ins frontend navigieren 'cd frontend'
+    a. folgenden Befehl ins Terminal eintragen: 'npm install'
+5. Aus dem frontend zurück navigieren'cd ..' und anschließend nochmal 'npm install'
+6. Starten der Anwendendung mit folgendem Befehl: 'node start.js'
